@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #1c1a27;
+            color: white;
+        }
+
+        button {
+            background-color: #bbb;
+            display: block;
+            width: 100%
+        }
+
+        p {
+            padding: 4px;
+            background-color: #53687d;
+            width: 100%;
+            height: 20px;
+        }
+
+        h1 {
+            color: #f2aa42;
+        }
+
+        table {
+            width: auto;
+            border: 1px solid;
+        }
+
+        td {
+
+            background-color: #53687d;
+            border: 1px solid;
+            width: calc(100%/4);
+        }
+    </style>
+    <meta charset='utf-8'>
+    <link rel="icon" href="img/calculator.ico">
+    <title>Calculator ان شاء الله</title>
+
+</head>
+
+<body>
+    <div>
+        <p id="display">
+            this is the display
+        </p>
+
+        <table>
+            <tr>
+                <td>
+                    <button type="button" id="clearAll" onclick="clearFunction()">
+                        AC
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="backspace" onclick="backSpace()">
+                        ⌦
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="mod" onclick="mod()">
+                        %
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="divide" onclick="divide()">
+                        /
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button type="button" id="seven" onclick="insertSeven()">
+                        7
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="eight" onclick="insertEight()">
+                        8
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="nine" onclick="insertNine()">
+                        9
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="multiply" onclick="multiply()">
+                        *
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button type="button" id="four" onclick="insertFour()">
+                        4
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="five" onclick="insertFive()">
+                        5
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="six" onclick="insertSix()">
+                        6
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="minus" onclick="minus()">
+                        -
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button type="button" id="one" onclick="insertOne()">
+                        1
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="two" onclick="insertTwo()">
+                        2
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="three" onclick="insertThree()">
+                        3
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="plus" onclick="plus()">
+                        +
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="button" id="zero" onclick="insertZero()">
+                        0
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="point" onclick="insertPoint()">
+                        .
+                    </button>
+                </td>
+                <td>
+                    <button type="button" id="equal" onclick="equal()">
+                        =
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+
+</body>
+
+<script>
+    text = "";
+    document.getElementById("display").innerHTML = text;
+    function clearFunction() {
+        text = "";
+        document.getElementById("display").innerHTML = text;
+    }
+
+    function insertOne() {
+        document.getElementById("display").innerHTML = text += "1"
+    }
+
+    function insertTwo() {
+        document.getElementById("display").innerHTML = text += "2"
+    }
+
+    function insertThree() {
+        document.getElementById("display").innerHTML = text += "3"
+    }
+
+    function insertFour() {
+        document.getElementById("display").innerHTML = text += "4"
+    }
+
+    function insertFive() {
+        document.getElementById("display").innerHTML = text += "5"
+    }
+
+    function insertSix() {
+        document.getElementById("display").innerHTML = text += "6"
+    }
+
+    function insertSeven() {
+        document.getElementById("display").innerHTML = text += "7"
+    }
+
+    function insertEight() {
+        document.getElementById("display").innerHTML = text += "8"
+    }
+
+    function insertNine() {
+        document.getElementById("display").innerHTML = text += "9"
+    }
+
+    function backSpace() {
+        text = text.slice(0, text.length - 1);
+        document.getElementById("display").innerHTML = text;
+    }
+
+    function plus() {
+        document.getElementById("display").innerHTML = text += "+";
+    }
+
+    function minus() {
+        document.getElementById("display").innerHTML = text += "-";
+    }
+
+    function multiply() {
+        document.getElementById("display").innerHTML = text += "*";
+    }
+
+    function divide() {
+        document.getElementById("display").innerHTML = text += "/";
+    }
+
+    function mod() {
+        document.getElementById("display").innerHTML = text += "%";
+    }
+
+    function equal() {
+        if (text != "" && text !== undefined) {
+            text = eval(text);
+            document.getElementById("display").innerHTML = text;
+        }
+    }
+</script>
+
+</html>
