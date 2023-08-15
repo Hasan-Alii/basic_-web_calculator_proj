@@ -15,10 +15,8 @@
         }
 
         p {
-            padding: 4px;
-            background-color: #53687d;
-            width: 100%;
-            height: 20px;
+            max-width: 100%;
+            height: 20pt;
         }
 
         h1 {
@@ -32,7 +30,7 @@
 
         td {
 
-            background-color: #53687d;
+            background-color: #45484a;
             border: 1px solid;
             width: calc(100%/4);
         }
@@ -44,130 +42,129 @@
 </head>
 
 <body>
-    <div>
-        <p id="display">
-            this is the display
-        </p>
+    <table>
+        <tr>
+            <td colspan="4">
+                <p id="display"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="clearAll" onclick="clearFunction()">
+                    AC
+                </button>
+            </td>
+            <td>
+                <button type="button" id="backspace" onclick="backSpace()">
+                    ⌦
+                </button>
+            </td>
+            <td>
+                <button type="button" id="mod" onclick="mod()">
+                    %
+                </button>
+            </td>
+            <td>
+                <button type="button" id="divide" onclick="divide()">
+                    /
+                </button>
+            </td>
+        </tr>
 
-        <table>
-            <tr>
-                <td>
-                    <button type="button" id="clearAll" onclick="clearFunction()">
-                        AC
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="backspace" onclick="backSpace()">
-                        ⌦
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="mod" onclick="mod()">
-                        %
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="divide" onclick="divide()">
-                        /
-                    </button>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <button type="button" id="seven" onclick="insertSeven()">
+                    7
+                </button>
+            </td>
+            <td>
+                <button type="button" id="eight" onclick="insertEight()">
+                    8
+                </button>
+            </td>
+            <td>
+                <button type="button" id="nine" onclick="insertNine()">
+                    9
+                </button>
+            </td>
+            <td>
+                <button type="button" id="multiply" onclick="multiply()">
+                    *
+                </button>
+            </td>
+        </tr>
 
-            <tr>
-                <td>
-                    <button type="button" id="seven" onclick="insertSeven()">
-                        7
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="eight" onclick="insertEight()">
-                        8
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="nine" onclick="insertNine()">
-                        9
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="multiply" onclick="multiply()">
-                        *
-                    </button>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <button type="button" id="four" onclick="insertFour()">
+                    4
+                </button>
+            </td>
+            <td>
+                <button type="button" id="five" onclick="insertFive()">
+                    5
+                </button>
+            </td>
+            <td>
+                <button type="button" id="six" onclick="insertSix()">
+                    6
+                </button>
+            </td>
+            <td>
+                <button type="button" id="minus" onclick="minus()">
+                    -
+                </button>
+            </td>
+        </tr>
 
-            <tr>
-                <td>
-                    <button type="button" id="four" onclick="insertFour()">
-                        4
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="five" onclick="insertFive()">
-                        5
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="six" onclick="insertSix()">
-                        6
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="minus" onclick="minus()">
-                        -
-                    </button>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <button type="button" id="one" onclick="insertOne()">
+                    1
+                </button>
+            </td>
+            <td>
+                <button type="button" id="two" onclick="insertTwo()">
+                    2
+                </button>
+            </td>
+            <td>
+                <button type="button" id="three" onclick="insertThree()">
+                    3
+                </button>
+            </td>
+            <td>
+                <button type="button" id="plus" onclick="plus()">
+                    +
+                </button>
+            </td>
+        </tr>
 
-            <tr>
-                <td>
-                    <button type="button" id="one" onclick="insertOne()">
-                        1
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="two" onclick="insertTwo()">
-                        2
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="three" onclick="insertThree()">
-                        3
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="plus" onclick="plus()">
-                        +
-                    </button>
-                </td>
-            </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" id="zero" onclick="insertZero()">
+                    0
+                </button>
+            </td>
+            <td>
+                <button type="button" id="point" onclick="insertPoint()">
+                    .
+                </button>
+            </td>
+            <td>
+                <button type="button" id="equal" onclick="equal()">
+                    =
+                </button>
+            </td>
+        </tr>
 
-            <tr>
-                <td colspan="2">
-                    <button type="button" id="zero" onclick="insertZero()">
-                        0
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="point" onclick="insertPoint()">
-                        .
-                    </button>
-                </td>
-                <td>
-                    <button type="button" id="equal" onclick="equal()">
-                        =
-                    </button>
-                </td>
-            </tr>
-
-        </table>
-    </div>
+    </table>
 
 
 </body>
 
 <script>
-    text = "";
+    text = " ";
     document.getElementById("display").innerHTML = text;
     function clearFunction() {
         text = "";
@@ -210,6 +207,10 @@
         document.getElementById("display").innerHTML = text += "9"
     }
 
+    function insertPoint() {
+        document.getElementById("display").innerHTML = text += "."
+    }
+
     function backSpace() {
         text = text.slice(0, text.length - 1);
         document.getElementById("display").innerHTML = text;
@@ -232,7 +233,7 @@
     }
 
     function mod() {
-        document.getElementById("display").innerHTML = text += "%";
+        document.getElementById("display").innerHTML = text += "/100";
     }
 
     function equal() {
@@ -240,6 +241,57 @@
             text = eval(text);
             document.getElementById("display").innerHTML = text;
         }
+    }
+
+    document.onkeypress = function (event) {
+        if (event.defaultPrevented) {
+            return;
+        }
+        switch (event.key) {
+            case "1":
+                break;
+            case "2":
+                break;
+            case "3":
+                break;
+            case "4":
+                break;
+            case "5":
+                break;
+            case "6":
+                break;
+            case "7":
+                break;
+            case "8":
+                break;
+            case "9":
+                break;
+            case "0":
+                break;
+            case "+":
+                break;
+            case "/":
+                break;
+            case "*":
+                break;
+            case "-":
+                break;
+            case ".":
+                break;
+            case "Backspace":
+                backSpace();
+                break;
+            case "Enter":
+                equal();
+                break;
+            default:
+                return;
+        }
+        if (event.key != "Backspace" && event.key != "Enter") {
+            document.getElementById("display").innerHTML = text += event.key;
+
+        }
+        event.preventDefault();
     }
 </script>
 
